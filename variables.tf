@@ -1,7 +1,1 @@
-variable "primary_domain" {
-  description = "Primary domain"
-}
-
-variable "secondary_domain" {
-  description = "Secondary domain"
-}
+# Variables are placed in vars.tf, which is in .gitignore.

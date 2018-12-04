@@ -1,7 +1,7 @@
 # S3 bucket for hosting static website
 resource "aws_s3_bucket" "primary_domain" {
   bucket = "${var.primary_domain}"
-
+  region = "ap-southeast-2"
   website {
     index_document = "index.html"
   }
@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "primary_domain" {
 # S3 bucket for redirection
 resource "aws_s3_bucket" "secondary_domain" {
   bucket = "${var.secondary_domain}"
-
+  region = "ap-southeast-2"
   website {
     redirect_all_requests_to = "https://${var.primary_domain}"
   }
